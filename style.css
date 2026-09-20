@@ -1,0 +1,358 @@
+/* Reset e Variáveis Fluídas (Champanhe Rosé & Nanquim Suave) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-rose: #FAF6F0;        /* Um off-white champanhe rosé acetinado lindíssimo */
+    --text-black: #1A1918;     /* Preto nanquim suave para tipografia de alta costura */
+    --text-muted: #827E78;     /* Cinza âmbar fosco para descrições poéticas */
+    --accent: #D9C3B0;         /* Tom de ouro líquido e vidro jateado */
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--bg-rose);
+    color: var(--text-black);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ✨ Efeito de Luz Difusa (Simulando o perfume se espalhando no fundo) */
+.olfactory-glow {
+    position: fixed;
+    top: 25%;
+    left: 35%;
+    width: 40vw;
+    height: 40vw;
+    background: radial-gradient(circle, rgba(217, 195, 176, 0.25) 0%, rgba(250, 246, 240, 0) 70%);
+    z-index: 1;
+    pointer-events: none;
+    filter: blur(40px);
+}
+
+/* 🧭 Navbar Fluída */
+.navbar-fluid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo-fluid {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    font-size: 0.9rem;
+    letter-spacing: 5px;
+}
+
+.logo-fluid span {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+}
+
+.cta-fluid {
+    text-decoration: none;
+    color: var(--text-black);
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: letter-spacing 0.3s ease;
+}
+
+.cta-fluid:hover {
+    letter-spacing: 4px;
+}
+
+/* 🪐 Layout Orgânico e Descentrado */
+.liquid-container {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    align-items: center;
+    padding: 0 6%;
+    z-index: 2;
+    padding-top: 10vh;
+}
+
+/* BLOCO ESQUERDO: Manifesto Poético */
+.liquid-manifesto {
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.collection-year {
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: var(--text-muted);
+}
+
+.liquid-manifesto h2 {
+    font-family: var(--font-serif);
+    font-size: 2.8rem;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.liquid-manifesto h2 span {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.liquid-manifesto p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+/* BLOCO CENTRAL: O Frasco como Escultura Monumental */
+.liquid-sculpture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+}
+
+.sculpture-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 65vh;
+}
+
+.perfume-bottle {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+    z-index: 4;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Texto Gigante sutil passando por TRÁS do frasco de perfume */
+.bg-fluid-text {
+    position: absolute;
+    font-family: var(--font-serif);
+    font-size: 10vw;
+    font-weight: 600;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(26, 25, 24, 0.05); /* Linha ultra-fina vazada */
+    z-index: 2;
+    letter-spacing: 10px;
+    pointer-events: none;
+}
+
+/* Efeito de levitação luxuosa no hover do frasco */
+.sculpture-wrapper:hover .perfume-bottle {
+    transform: scale(1.05) translateY(-10px);
+}
+
+/* BLOCO DIREITO: Notas Olfativas Flutuando */
+.liquid-notes {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding-left: 2rem;
+    margin-top: 15vh; /* Deslocado para quebrar a simetria dura */
+}
+
+.note-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-left: 1px solid rgba(26, 25, 24, 0.08);
+    padding-left: 1.5rem;
+    transition: border-color 0.4s ease;
+}
+
+.note-number {
+    font-size: 0.65rem;
+    font-weight: 400;
+    color: var(--accent);
+    letter-spacing: 2px;
+}
+
+.note-item h3 {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.note-item p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    font-weight: 300;
+}
+
+.note-item:hover {
+    border-color: var(--text-black);
+}
+
+/* 📱 Responsividade Fluída para Mobile */
+@media (max-width: 1024px) {
+    .liquid-container {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+        padding-top: 15vh;
+        padding-bottom: 5vh;
+    }
+    .liquid-manifesto {
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+    .sculpture-wrapper {
+        height: 45vh;
+    }
+    .bg-fluid-text {
+        font-size: 18vw;
+    }
+    .liquid-notes {
+        padding-left: 0;
+        margin-top: 0;
+        gap: 3rem;
+    }
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DO RODAPÉ (FOOTER LIQUID MOOD)
+   ========================================================================== */
+.footer-fluid {
+    background-color: var(--bg-rose);
+    padding: 8rem 6% 3rem 6%;
+    border-top: 1px solid rgba(26, 25, 24, 0.05);
+    position: relative;
+    z-index: 5;
+}
+
+.footer-fluid-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    gap: 5rem;
+    margin-bottom: 5rem;
+}
+
+.footer-fluid-logo {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin-bottom: 1.5rem;
+    color: var(--text-black);
+}
+
+.footer-fluid-logo span {
+    color: var(--accent);
+}
+
+.footer-fluid-tagline {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    max-width: 320px;
+    font-weight: 300;
+}
+
+.ff-label {
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: var(--text-black);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.footer-fluid-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.ff-link {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+    font-weight: 300;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.ff-link:hover {
+    color: var(--text-black);
+    transform: translateX(4px);
+}
+
+.ff-status {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.btn-fluid-footer {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-black);
+    font-weight: 400;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    border-bottom: 1px solid var(--text-black);
+    padding-bottom: 4px;
+    text-transform: uppercase;
+    transition: letter-spacing 0.3s ease;
+}
+
+.btn-fluid-footer:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    letter-spacing: 4px;
+}
+
+.footer-fluid-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(26, 25, 24, 0.03);
+}
+
+.footer-fluid-bottom p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+    .footer-fluid-container {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+        text-align: center;
+    }
+    .footer-fluid-tagline {
+        margin: 0 auto;
+    }
+    .ff-link:hover {
+        transform: translateX(0);
+    }
+}
